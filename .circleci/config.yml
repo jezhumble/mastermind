@@ -6,6 +6,8 @@ jobs:
 
     steps:
       - checkout
-      - command: pip install requirements.txt
+      - run:
+        name: Install Python Dependencies
+        command: pip install requirements.txt
       - run: mkdir test-reports
       - run: run_tests
