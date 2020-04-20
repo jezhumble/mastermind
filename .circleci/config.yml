@@ -1,20 +1,8 @@
-version: 2.1
+version: 2
 jobs:
-  run_tests:
+  build:
     docker:
       - image: circleci/python:3.7
-
-    working_directory: ~/repo
-
     steps:
       - checkout
-      - run:
-        name: Install Python Dependencies
-        command: |
-          python3 -m venv venv
-          . venv/bin/activate
-          pip install -r requirements.txt
-workflows:
-  build tests:
-    jobs:
-      - run_tests
+      - run: pip install -r requirements.txt
