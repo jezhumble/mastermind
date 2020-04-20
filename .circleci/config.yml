@@ -6,7 +6,9 @@ jobs:
 
     steps:
       - checkout
-      - run: pip install -r requirements.txt
+      - run: 
+        name: Install Python Dependencies
+        command: pip install -r requirements.txt
 workflows:
   build tests:
     jobs:
