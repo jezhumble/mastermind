@@ -8,7 +8,8 @@ jobs:
       - checkout
       - run: 
         name: Install Python Dependencies
-        command: pip install -r requirements.txt
+        command: |
+          pip install -r requirements.txt
 workflows:
   build tests:
     jobs:
