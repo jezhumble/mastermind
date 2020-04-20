@@ -3,6 +3,9 @@ jobs:
   run_tests:
     docker:
       - image: circleci/python:3.7
+
     steps:
       - checkout
+      - command: pip install requirements.txt
+      - run: mkdir test-reports
       - run: run_tests
