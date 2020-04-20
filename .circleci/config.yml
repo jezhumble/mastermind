@@ -10,7 +10,10 @@ jobs:
       - checkout
       - run:
         name: Install Python Dependencies
-        command: pip install -r requirements.txt
+        command: |
+          python3 -m venv venv
+          . venv/bin/activate
+          pip install -r requirements.txt
 workflows:
   build tests:
     jobs:
