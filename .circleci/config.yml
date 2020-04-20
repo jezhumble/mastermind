@@ -5,4 +5,6 @@ jobs:
       - image: circleci/python:3.7
     steps:
       - checkout
-      - run: pip install -r requirements.txt
+      - run: 
+        name: Install Python Dependencies
+        command: pip install -r requirements.txt
