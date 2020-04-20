@@ -4,12 +4,13 @@ jobs:
     docker:
       - image: circleci/python:3.7
 
+    working_directory: ~/repo
+
     steps:
       - checkout
-      - run: 
+      - run:
         name: Install Python Dependencies
-        command: |
-          pip install -r requirements.txt
+        command: pip install -r requirements.txt
 workflows:
   build tests:
     jobs:
